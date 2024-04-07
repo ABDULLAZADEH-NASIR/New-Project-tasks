@@ -3,8 +3,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 /.idea
-/.new project.iml
-/.idea
+/.gitignore
+/new project.iml
 
 
 ### Eclipse ###
