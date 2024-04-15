@@ -3,47 +3,22 @@ import java.util.Scanner;
 public class homework1 {
     public static void main(String[] args) {
 
-        //1. Binary search eden rekursiv method yazin, method parametrinde integer array ve
-//number alib, arrayin icinde hemin numberi binary search ile tapmalidir.
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Arrayin olcusunu daxiol edin: ");
+        int size=scanner.nextInt();
+        int [] array=new int[size];
 
 
-        while (true) {
-            int[] array = {1,10,8,7};
-            System.out.println("Enter search number: ");
-            int n = new Scanner(System.in).nextInt();
-            binarysearchnumber(array, n);
-        }
+
     }
 
-    public static void binarysearchnumber(int [] array, int n) {
-        for(int i=0;i<array.length-1;i++){
-            for (int j=0;j<array.length-1-i;j++){
-                if(array[j]>array[j+1]){
-                    int temp=array[j];
-                    array[j]=array[j+1];
-                    array[j+1]=temp;
-                }
-            }
+    public static int [] arrayRegemleridaxiletmek(int []array){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Eded daxil edin: ");
+        int eded=scanner.nextInt();
+        for (int i=0;i<array.length;i++){
+            array[i]=eded;
         }
-
-        int minIndex = 0;
-        int maxIndex = array.length - 1;
-
-        while (maxIndex >= minIndex) {
-            int average = (maxIndex + minIndex) / 2;
-
-            if (array[average] == n) {
-
-                System.out.println("Eded movcuddur: ");
-                return;
-
-            } else if (average < n) {
-                minIndex = average + 1;
-            } else {
-                maxIndex = average - 1;
-            }
-        }
-        System.out.println("Eded movcud deyil: ");
+        return array;
     }
-
 }
